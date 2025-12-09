@@ -130,3 +130,11 @@ pip uninstall -r requirements.txt -y
 - Add more cities
 - Create automated testing
 - Set up CI/CD pipeline
+
+## Demo Images
+<img width="1716" height="842" alt="vs-image" src="https://github.com/user-attachments/assets/58d3441d-7207-406f-8ade-964bff39b5c5" />
+
+<img width="1845" height="460" alt="weahter-image" src="https://github.com/user-attachments/assets/d58c83b4-cb24-4a0e-82b0-ac87dea31094" />
+
+
+
