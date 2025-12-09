@@ -28,49 +28,61 @@ This project demonstrates core DevOps principles by combining:
   - python-dotenv
   - requests
 
-```markdown
 ## Project Structure
+```
 weather-dashboard/
-  src/
-    __init__.py
-    weather_dashboard.py
-  tests/
-  data/
-  .env
-  .gitignore
-  requirements.txt
+├── src/
+│   ├── __init__.py
+│   └── weather_dashboard.py
+├── tests/
+├── data/
+├── .env
+├── .gitignore
+└── requirements.txt
+```
 
 ## Setup Instructions
+
 1. Clone the repository:
---bash
+```bash
 git clone https://github.com/gus-hub-tech/weather-dashboard.git
+cd weather-dashboard
+```
 
-3. Install dependencies:
-bashCopypip install -r requirements.txt
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-4. Configure environment variables (.env):
-CopyOPENWEATHER_API_KEY=your_api_key
+3. Configure environment variables (.env):
+```
+OPENWEATHER_API_KEY=your_api_key
 AWS_BUCKET_NAME=your_bucket_name
+```
 
-4.Configure AWS credentials:
-bashCopyaws configure
+4. Configure AWS credentials:
+```bash
+aws configure
+```
 
 5. Run the application:
+```bash
 python src/weather_dashboard.py
+```
 
-What I Learned
+## What I Learned
 
-AWS S3 bucket creation and management
-Environment variable management for secure API keys
-Python best practices for API integration
-Git workflow for project development
-Error handling in distributed systems
-Cloud resource management
+- AWS S3 bucket creation and management
+- Environment variable management for secure API keys
+- Python best practices for API integration
+- Git workflow for project development
+- Error handling in distributed systems
+- Cloud resource management
 
-Future Enhancements
+## Future Enhancements
 
-Add weather forecasting
-Implement data visualization
-Add more cities
-Create automated testing
-Set up CI/CD pipeline
+- Add weather forecasting
+- Implement data visualization
+- Add more cities
+- Create automated testing
+- Set up CI/CD pipeline
