@@ -6,7 +6,6 @@ A weather data collection system using AWS S3 and OpenWeather API
 This project demonstrates core DevOps principles by combining:
 - External API Integration (OpenWeather API)
 - Cloud Storage (AWS S3)
-- Infrastructure as Code
 - Version Control (Git)
 - Python Development
 - Error Handling
@@ -49,25 +48,70 @@ git clone https://github.com/gus-hub-tech/weather-dashboard.git
 cd weather-dashboard
 ```
 
-2. Install dependencies:
+2. Create a virtual environment:
+```bash
+python3 -m venv venv
+```
+
+3. Activate the virtual environment:
+```bash
+# On Linux/macOS:
+source venv/bin/activate
+
+# On Windows:
+venv\Scripts\activate
+```
+
+4. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Configure environment variables (.env):
-```
-OPENWEATHER_API_KEY=your_api_key
-AWS_BUCKET_NAME=your_bucket_name
+5. Create and configure the .env file:
+```bash
+# Create .env file in the project root
+touch .env
 ```
 
-4. Configure AWS credentials:
+Add the following variables to your .env file:
+```
+# OpenWeather API Configuration
+OPENWEATHER_API_KEY=your_openweather_api_key_here
+
+# AWS S3 Configuration
+AWS_BUCKET_NAME=your_s3_bucket_name_here
+```
+
+To get your OpenWeather API key:
+- Sign up at https://openweathermap.org/api
+- Navigate to API keys section
+- Copy your API key
+
+6. Configure AWS credentials:
 ```bash
 aws configure
 ```
+Provide your:
+- AWS Access Key ID
+- AWS Secret Access Key
+- Default region (e.g., us-east-1)
+- Default output format (json)
 
-5. Run the application:
+7. Run the application:
 ```bash
 python src/weather_dashboard.py
+```
+
+8. Deactivate the virtual environment (when finished):
+```bash
+deactivate
+```
+
+## Uninstall
+
+To uninstall all project dependencies:
+```bash
+pip uninstall -r requirements.txt -y
 ```
 
 ## What I Learned
